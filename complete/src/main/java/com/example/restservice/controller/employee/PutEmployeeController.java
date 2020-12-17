@@ -19,6 +19,7 @@ public class PutEmployeeController {
 	@Autowired
 	EmployeeStorage employees;
 	
+	//puts employee into specified location
 	@PutMapping("/employee/{id}")
 	public ResponseEntity<String> putEmployee(@PathVariable int id, @RequestBody Employee employee) {
 		
