@@ -17,6 +17,7 @@ public class DeleteEmployeeController {
     @Autowired
     EmployeeStorage employees;
     
+    //Delete employee with specific id
     @DeleteMapping("/employee/{id}")
     public ResponseEntity deleteEmployee(@PathVariable int id){
     	
