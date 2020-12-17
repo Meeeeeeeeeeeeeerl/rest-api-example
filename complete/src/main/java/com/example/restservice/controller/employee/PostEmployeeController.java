@@ -19,6 +19,7 @@ public class PostEmployeeController {
 	@Autowired
 	EmployeeStorage employees;
 
+	//Adds a new employee
 	@PostMapping("/employee")
 	public ResponseEntity<EmployeeResponse> postEmployee(@RequestBody Employee employee) {
 		employees.add(employee);
