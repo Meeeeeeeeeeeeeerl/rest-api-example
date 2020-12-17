@@ -1,0 +1,812 @@
+{
+	"info": {
+		"_postman_id": "1b70c96b-fd07-434b-a0f4-b4829b5be054",
+		"name": "API Presentation ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "GET List of Employees",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "pilot",
+								"value": "BretMichaels",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "price",
+								"value": "42.69",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "maxWeight",
+								"value": "420",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "seats",
+								"value": "3",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "startLocation",
+								"value": "Mannheim",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "destinationLocation",
+								"value": "Altersheim",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "flightStart",
+								"value": "930",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "planeType",
+								"value": "Boot",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "flightNumber",
+								"value": "1337",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"street\": \"Changestr. 10\",\r\n    \"postCode\": \"24241\",\r\n    \"city\": \"Holland\",\r\n    \"country\": \"Germany\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/employee",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"employee"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Flügelschlag",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Employee By ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "3c1ecee8e7c73b5fe3f09b1b51da840f66363183",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "pilot",
+								"value": "BretMichaels",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "price",
+								"value": "42.69",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "maxWeight",
+								"value": "420",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "seats",
+								"value": "3",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "startLocation",
+								"value": "Mannheim",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "destinationLocation",
+								"value": "Altersheim",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "flightStart",
+								"value": "930",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "planeType",
+								"value": "Boot",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "flightNumber",
+								"value": "1337",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/employee/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"1"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Flügelschlag",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Employee",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "pilot",
+								"value": "BretMichaels",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "price",
+								"value": "42.69",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "maxWeight",
+								"value": "420",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "seats",
+								"value": "3",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "startLocation",
+								"value": "Mannheim",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "destinationLocation",
+								"value": "Altersheim",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "flightStart",
+								"value": "930",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "planeType",
+								"value": "Boot",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "flightNumber",
+								"value": "1337",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"name\": \"Merlin Müller\",\r\n    \"salary\": 4200,\r\n    \"birthday\": \"2000-02-26\",\r\n    \"street\": \"Muskstr. 69\",\r\n    \"postCode\": \"420\",\r\n    \"city\": \"Muskoville\",\r\n    \"country\": \"Mars\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/employee/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Flügelschlag",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Employee",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "pilot",
+								"value": "BretMichaels",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "price",
+								"value": "42.69",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "maxWeight",
+								"value": "420",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "seats",
+								"value": "3",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "startLocation",
+								"value": "Mannheim",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "destinationLocation",
+								"value": "Altersheim",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "flightStart",
+								"value": "930",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "planeType",
+								"value": "Boot",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "flightNumber",
+								"value": "1337",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Jack Daniels\",\r\n    \"salary\": 2069,\r\n    \"birthday\": \"1989-01-02\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/employee/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"1"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Flügelschlag",
+									"disabled": true
+								}
+							]
+						},
+						"description": "PUT Customer"
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH Employee",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "pilot",
+								"value": "BretMichaels",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "price",
+								"value": "42.69",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "maxWeight",
+								"value": "420",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "seats",
+								"value": "3",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "startLocation",
+								"value": "Mannheim",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "destinationLocation",
+								"value": "Altersheim",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "flightStart",
+								"value": "930",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "planeType",
+								"value": "Boot",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "flightNumber",
+								"value": "1337",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"salary\": 1337\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/employee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Flügelschlag",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Employee",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "pilot",
+								"value": "BretMichaels",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "price",
+								"value": "42.69",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "maxWeight",
+								"value": "420",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "seats",
+								"value": "3",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "startLocation",
+								"value": "Mannheim",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "destinationLocation",
+								"value": "Altersheim",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "flightStart",
+								"value": "930",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "planeType",
+								"value": "Boot",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "flightNumber",
+								"value": "1337",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"salary\": 2099\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/employee/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"4"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Flügelschlag",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Adress",
+			"item": [
+				{
+					"name": "GET Adress",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "pilot",
+								"value": "BretMichaels",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "price",
+								"value": "42.69",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "maxWeight",
+								"value": "420",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "seats",
+								"value": "3",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "startLocation",
+								"value": "Mannheim",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "destinationLocation",
+								"value": "Altersheim",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "flightStart",
+								"value": "930",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "planeType",
+								"value": "Boot",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "flightNumber",
+								"value": "1337",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/employee/1/adress",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"1",
+								"adress"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Flügelschlag",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Adress",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "pilot",
+								"value": "BretMichaels",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "price",
+								"value": "42.69",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "maxWeight",
+								"value": "420",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "seats",
+								"value": "3",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "startLocation",
+								"value": "Mannheim",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "destinationLocation",
+								"value": "Altersheim",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "flightStart",
+								"value": "930",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "planeType",
+								"value": "Boot",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "flightNumber",
+								"value": "1337",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"street\": \"Changestr. 10\",\r\n    \"postCode\": \"24241\",\r\n    \"city\": \"Holland\",\r\n    \"country\": \"Germany\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/employee/1/adress",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"1",
+								"adress"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Flügelschlag",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token_owl",
+			"value": "3c1ecee8e7c73b5fe3f09b1b51da840f66363183"
+		}
+	]
+}
