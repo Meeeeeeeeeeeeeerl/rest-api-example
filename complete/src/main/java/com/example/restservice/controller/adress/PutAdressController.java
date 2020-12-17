@@ -20,6 +20,7 @@ public class PutAdressController {
 	@Autowired
 	EmployeeStorage employees;
 	
+	//Update adress of specific employee
 	@PutMapping("/employee/{id}/adress")
 	public ResponseEntity<String> putEmployee(@PathVariable int id, @RequestBody Adress adress) {
 		
