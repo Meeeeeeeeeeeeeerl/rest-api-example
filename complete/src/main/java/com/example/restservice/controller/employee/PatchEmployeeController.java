@@ -18,6 +18,7 @@ public class PatchEmployeeController {
 	@Autowired 
 	EmployeeStorage employees;
 	
+	//Update salary of specified employee
 	@PatchMapping("/employee")
 	public ResponseEntity patchSalaryUpdate(@RequestBody Employee employee){
 		
