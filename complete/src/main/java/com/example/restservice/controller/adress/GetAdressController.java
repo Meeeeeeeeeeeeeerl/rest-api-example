@@ -22,6 +22,7 @@ public class GetAdressController {
 	@Autowired
 	EmployeeStorage employees;
 	
+	//Get adress of a specific employee
 	@GetMapping("/employee/{id}/adress")
 	public ResponseEntity<?> getEmployee(@PathVariable int id) {
 		if(employees.exists(id)) {
