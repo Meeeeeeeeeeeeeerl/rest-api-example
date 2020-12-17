@@ -1,0 +1,237 @@
+openapi: 3.0.1
+info:
+  title: Employee Information Service
+  description: This is a service for all information regarding employees
+  termsOfService: http://swagger.io/terms/
+  contact:
+    email: apiteam@swagger.io
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+externalDocs:
+  description: Find out more about Swagger
+  url: http://swagger.io
+servers:
+- url: https://HierGibtEsNichtsZuSehen.com
+tags:
+- name: employee
+  description: Operations about employees
+- name: adress
+  description: Operations about adresses
+paths:
+  /employee:
+    get:
+      tags:
+      - employee
+      summary: Get all employees
+      operationId: getAllEmployees
+      responses:
+        200:
+          description: OK
+          content: 
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Employee"
+    post:
+      tags:
+      - employee
+      summary: Adds a new employee
+      operationId: addEmployee
+      requestBody:
+        description: Adds an employee based on given parameters
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EmployeeRequestBody"
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Employee"
+    patch:
+      tags:
+      - employee
+      summary: Updates salary of an employee
+      operationId: patchSalaryUpdate
+      requestBody:
+        description: Requires employee ID and new salary
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                id:
+                  type: integer
+                salary:
+                  type: number
+            
+      responses:
+        200:
+          description: OK
+          
+  /employee/{employeeId}:
+    get:
+      tags:
+      - employee
+      summary: Get employee by ID
+      operationId: getEmployeeById
+      parameters:
+      - name: employeeId
+        in: path
+        description: employeeId of specific employee
+        required: true
+        schema:
+          type: integer
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Employee"
+    put:
+      tags:
+      - employee
+      summary: Put employee into specified location
+      operationId: putEmployeeById
+      parameters:
+      - name: employeeId
+        in: path
+        description: employeeId of specific employee
+        required: true
+        schema:
+          type: integer
+      responses:
+        200:
+          description: OK
+          
+    delete:
+      tags:
+      - employee
+      summary: Delete employee with specified id
+      operationId: deleteEmployeeById
+      parameters:
+      - name: employeeId
+        in: path
+        description: employeeId of specific employee
+        required: true
+        schema:
+          type: integer
+      responses:
+        200:
+          description: OK
+          
+  /employee/{employeeId}/adress:
+    get:
+      tags:
+      - adress
+      summary: Get adress of specific employee
+      operationId: getAdressOfEmployee
+      
+      parameters:
+      - name: employeeId
+        in: path
+        description: employeeId of specific employee
+        required: true
+        schema:
+          type: integer
+      responses:
+        200:
+          description: OK
+          content: 
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Adress"
+    put:
+      tags:
+      - adress
+      summary: Update adress of specific employee
+      operationId: putAdressOfEmployee
+      
+      parameters:
+      - name: employeeId
+        in: path
+        description: employeeId of specific employee
+        required: true
+        schema:
+          type: integer
+      responses:
+        200:
+          description: OK
+        
+components:
+  schemas:
+    Employee:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        salary:
+          type: number
+        birthday:
+          type: number
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/Link'
+      xml:
+        name: Employee
+        
+    EmployeeRequestBody:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        salary:
+          type: number
+        birthday:
+          type: number
+        street:
+          type: string
+        postCode:
+          type: string
+        city:
+          type: string
+        country:
+          type: string
+        
+      xml:
+        name: Employee
+    Adress:
+      type: object
+      properties:
+        id:
+          type: integer
+        street:
+          type: string
+        postCode:
+          type: string
+        city:
+          type: string
+        country:
+          type: string
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/Link'
+      xml:
+        name: Adress
+    Link:
+      type: object
+      properties:
+        rel:
+          type: string
+        href:
+          type: string
+      xml:
+        name: Link
