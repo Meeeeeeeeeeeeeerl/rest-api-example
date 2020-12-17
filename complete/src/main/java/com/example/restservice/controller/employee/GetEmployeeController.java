@@ -22,6 +22,7 @@ public class GetEmployeeController {
 	@Autowired
 	EmployeeStorage employees;
 	
+	//Get employee by id
 	@GetMapping("/employee/{id}")
 	public ResponseEntity<?> getEmployee(@PathVariable int id) {
 		if(employees.exists(id)) {
@@ -31,7 +32,7 @@ public class GetEmployeeController {
 		}
 	}
 
-	
+	//Get all employees
 	@GetMapping("/employee")
 	public ResponseEntity<Collection<EmployeeResponse>> getAllEmployees() {
 		return new ResponseEntity<Collection<EmployeeResponse>> (employees.getAllEmployeeResponses(), HttpStatus.OK);
